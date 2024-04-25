@@ -44,10 +44,33 @@ export const FOOTER_LINKS = [
   },
   {
     title: "legislação e regulamentação",
-    text: [
+    texts: [
       "combate ao branquemento de capitais e financiamento do terrorismo",
       "legislação cambial",
       "quadro regulamentar e legislativo",
     ],
+  },
+]
+
+export const NAV_LINKS = [
+  {
+    path: "/",
+    label: "institucional",
+  },
+  {
+    path: "/publicações",
+    label: "publicações",
+  },
+  {
+    path: "/sistema-financeiro",
+    label: "sistema financeiro",
+  },
+  {
+    path: "/educação-financeira",
+    label: "educação financeira",
+  },
+  {
+    path: "/legislação-e-regulamentação",
+    label: "legislação e regulamentação",
   },
 ]
