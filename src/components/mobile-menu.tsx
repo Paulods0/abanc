@@ -4,32 +4,67 @@ import {
   SheetTrigger,
   SheetContent,
   SheetClose,
+  SheetFooter,
 } from "@/components/ui/sheet"
 import { NAV_LINKS } from "@/constants"
 import { Link } from "react-router-dom"
+import { CgMail } from "react-icons/cg"
+import { FaXTwitter } from "react-icons/fa6"
+import { FaFacebook } from "react-icons/fa"
+
+import { CiSearch } from "react-icons/ci"
 
 const MobileMenu = () => {
   return (
-    <div className="lg:hidden block mb-1">
+    <div className="lg:hidden block">
       <Sheet>
         <SheetTrigger>
-          <div className="text-[40px]">
+          <div className="text-[30px] p-4">
             <IoMdMenu />
           </div>
         </SheetTrigger>
-        <SheetContent className="flex items-center justify-center">
-          <ul className="w-full flex flex-col items-start justify-center gap-y-8">
-            {NAV_LINKS.map((link, index) => (
-              <li key={index}>
-                <Link
-                  className="capitalize text-[25px] text-black"
-                  to={link.path}
-                >
-                  <SheetClose className="capitalize">{link.label}</SheetClose>
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <SheetContent className="flex flex-col items-center justify-start">
+          {/* <SheetClose className="absolute right-2">fechar</SheetClose> */}
+
+          <img
+            src="/logo/logo-2.png"
+            className="w-20 self-start object-cover"
+          />
+
+          <div className="flex items-center border my-4 px-3 py-1 text-vermelho rounded-full">
+            <input
+              type="text"
+              placeholder="Pesquise algo..."
+              className="border-none outline-none text-base text-black placeholder:text-black"
+            />
+            <button onClick={() => console.log("pesquisou mobile-navbar")}>
+              <CiSearch size={22} />
+            </button>
+          </div>
+
+          <section className="flex flex-col w-full justify-between items-start">
+            <ul className="w-full flex flex-col items-start justify-center gap-y-6 mt-8">
+              <h1 className="font-bold text-zinc-800 uppercase">Navegação</h1>
+              {NAV_LINKS.map((link, index) => (
+                <li key={index}>
+                  <Link className="text-xs text-black" to={link.path}>
+                    <SheetClose className="uppercase">{link.label}</SheetClose>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <SheetFooter className="self-center mt-36">
+              <div className="flex flex-col">
+                <h1 className="font-bold uppercase">Partilhe este site</h1>
+                <div className="flex mt-4 items-center justify-between">
+                  <FaFacebook size={24} />
+                  <FaXTwitter size={24} />
+                  <CgMail size={24} />
+                </div>
+              </div>
+            </SheetFooter>
+          </section>
         </SheetContent>
       </Sheet>
     </div>

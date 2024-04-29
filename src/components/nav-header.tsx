@@ -2,7 +2,7 @@ import { BsTelephone } from "react-icons/bs"
 
 const NavHeader = () => {
   return (
-    <div className="flex justify-between bg-white/5  items-center">
+    <div className="flex justify-between bg-black/10  items-center">
       <span className="border-r border-r-black/30 px-2 text-black/50 text-xs">
         Mercados Angola
       </span>

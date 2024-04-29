@@ -1,16 +1,45 @@
 import { Link, useLocation } from "react-router-dom"
-import { CiSearch } from "react-icons/ci"
-import { FiPhone } from "react-icons/fi"
+
 import MobileMenu from "./mobile-menu"
 import { NAV_LINKS } from "@/constants"
 import Container from "./container"
 import NavHeader from "./nav-header"
+import SearchBar from "./search-bar"
 
 const Navbar = () => {
   return (
-    <header className="bg-black/30 flex flex-col">
+    <header className="flex flex-col">
       <NavHeader />
-      navbar
+
+      <Container>
+        <section className="flex items-center md:items-end lg:items-end justify-between py-2">
+          <img
+            src="/logo/logo-2.png"
+            className="w-24 md:w-40 object-cover"
+            alt="logotipo"
+          />
+
+          <nav className=" hidden md:hidden lg:flex items-center mb-[calc(160px/25)]">
+            <ul className="flex items-center gap-x-6 ">
+              {NAV_LINKS.map((link, i) => (
+                <li key={i}>
+                  <Link
+                    to={link.path}
+                    className="capitalize hover:text-vermelho duration-200 transition-all"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <SearchBar />
+
+          <div className="mt-2">
+            <MobileMenu />
+          </div>
+        </section>
+      </Container>
     </header>
   )
 }
