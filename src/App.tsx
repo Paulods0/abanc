@@ -9,9 +9,9 @@ import PageSistemaFinanceiro from "./pages/page-sistema-financeiro"
 
 function App() {
   return (
-    <main className="h-screen flex-col font-montSerrat w-full">
+    <main className="font-montSerrat">
       <Navbar />
-      <main className="w-full px-6">
+      <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/publicações" element={<PagePublicacoes />} />

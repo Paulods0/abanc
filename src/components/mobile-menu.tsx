@@ -10,7 +10,7 @@ import { Link } from "react-router-dom"
 
 const MobileMenu = () => {
   return (
-    <div className="lg:hidden block">
+    <div className="lg:hidden block mb-1">
       <Sheet>
         <SheetTrigger>
           <div className="text-[40px]">

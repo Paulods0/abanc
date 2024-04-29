@@ -86,3 +86,11 @@
 .swiper-pagination-bullet-active {
   background-color: red;
 }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #dddd;
+  border-radius: 50px;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
