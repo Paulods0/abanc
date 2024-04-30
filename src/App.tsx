@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
-import Navbar from "./components/nav-bar"
+import Navbar from "./components/navbar/nav-bar"
 import HomePage from "./pages/home-page"
-import Footer from "./components/footer"
+import Footer from "./components/footer/footer"
 import PageEducacaoFinanceira from "./pages/page-educacao-financeira"
 import PageLegislacao from "./pages/page-legislacao"
 import PagePublicacoes from "./pages/page-publicacoes"
@@ -11,7 +11,7 @@ function App() {
   return (
     <main className="font-montSerrat">
       <Navbar />
-      <main>
+      <main className="h-screen">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/publicações" element={<PagePublicacoes />} />

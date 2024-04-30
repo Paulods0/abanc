@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom"
 
 import MobileMenu from "./mobile-menu"
 import { NAV_LINKS } from "@/constants"
-import Container from "./container"
+import Container from "../container"
 import NavHeader from "./nav-header"
 import SearchBar from "./search-bar"
 
