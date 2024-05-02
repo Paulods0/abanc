@@ -18,6 +18,7 @@ const Footer = () => {
 
   return (
     <footer className="relative w-full bg-black/20 rounded-t-xl flex flex-col">
+
       <div
         onMouseEnter={handleOnMouseEnter}
         onMouseLeave={handleOnMouseLeave}
@@ -139,6 +140,7 @@ const Footer = () => {
           <p className="capitalize">cancelar newsletter</p>
         </Container>
       </section>
+      
     </footer>
   )
 }

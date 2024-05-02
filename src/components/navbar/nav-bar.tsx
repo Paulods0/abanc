@@ -7,12 +7,15 @@ import NavHeader from "./nav-header"
 import SearchBar from "./search-bar"
 
 const Navbar = () => {
+  const location = useLocation().pathname
+  const currentPath = decodeURIComponent(location)
+
   return (
-    <header className="flex flex-col">
+    <header className="flex flex-col border-b pb-4">
       <NavHeader />
 
       <Container>
-        <section className="flex items-center md:items-end lg:items-end justify-between py-2">
+        <section className="flex px-14 lg:px-0 items-center md:items-end lg:items-end justify-between py-2">
           <img
             src="/logo/logo-2.png"
             className="w-24 md:w-40 object-cover"
@@ -25,7 +28,9 @@ const Navbar = () => {
                 <li key={i}>
                   <Link
                     to={link.path}
-                    className="capitalize hover:text-vermelho duration-200 transition-all"
+                    className={`capitalize text-sm hover:text-vermelho font-semibold duration-200 transition-all ${
+                      currentPath === link.path ? "text-vermelho" : "text-black"
+                    }`}
                   >
                     {link.label}
                   </Link>

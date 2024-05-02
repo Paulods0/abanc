@@ -1,14 +1,16 @@
+import { Card } from "../ui/card"
+
 type Props = {
   videoURL: string
 }
 
 const VideoCard = ({ videoURL }: Props) => {
   return (
-    <div className="rounded-lg">
-      <video controls className="w-[35vw] h-[250px] rounded-lg object-cover">
+    <Card className="rounded-lg">
+      <video controls className="w-full h-auto rounded-lg object-cover">
         <source src={videoURL} />
       </video>
-    </div>
+    </Card>
   )
 }
 
