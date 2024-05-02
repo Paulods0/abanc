@@ -6,6 +6,7 @@ import PageEducacaoFinanceira from "./pages/educacao-financeira/page-educacao-fi
 import PageLegislacao from "./pages/legislacao-e-regulamentacao/page-legislacao"
 import PagePublicacoes from "./pages/publicacoes/page-publicacoes"
 import PageSistemaFinanceiro from "./pages/sistema-financeiro/page-sistema-financeiro"
+import PageInstitucional from "./pages/institucional/page-institucional"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/institucional" element={<PageInstitucional />} />
           <Route path="/publicações" element={<PagePublicacoes />} />
           <Route
             path="/sistema-financeiro"

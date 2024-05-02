@@ -16,11 +16,13 @@ const Navbar = () => {
 
       <Container>
         <section className="flex px-14 lg:px-0 items-center md:items-end lg:items-end justify-between py-2">
-          <img
-            src="/logo/logo-2.png"
-            className="w-24 md:w-40 object-cover"
-            alt="logotipo"
-          />
+          <Link to={"/"}>
+            <img
+              src="/logo/logo-2.png"
+              className="w-24 md:w-40 object-cover"
+              alt="logotipo"
+            />
+          </Link>
 
           <nav className=" hidden md:hidden lg:flex items-center mb-[calc(160px/25)]">
             <ul className="flex items-center gap-x-6 ">

@@ -54,7 +54,7 @@ export const FOOTER_LINKS = [
 
 export const NAV_LINKS = [
   {
-    path: "/",
+    path: "/institucional",
     label: "institucional",
   },
   {
