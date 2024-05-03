@@ -12,7 +12,7 @@ type Props = {
 
 const Slider = ({ image }: Props) => {
   return (
-    <div className="w-full px-3 lg:px-0">
+    <div className="w-full px-0">
       <Swiper
         slidesPerView={1}
         spaceBetween={50}

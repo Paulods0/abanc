@@ -34,7 +34,7 @@ const Footer = () => {
           marginBottom: hovered ? "32px" : "0px",
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="lg:grid grid-cols-3 place-items-start gap-8 mt-6 mx-auto my-2 hidden overflow-hidden origin-top"
+        className="lg:grid grid-cols-3 place-items-start gap-14 mt-6 mx-auto my-2 hidden overflow-hidden origin-top"
       >
         <FooterHeadInfo
           title={FOOTER_LINKS[0].title}
@@ -96,7 +96,7 @@ const Footer = () => {
         <div
           onMouseEnter={handleOnMouseEnter}
           onMouseLeave={handleOnMouseLeave}
-          className="grid grid-cols-2 gap-4 md:grid-cols-2 mb-8 lg:grid-cols-4 lg:gap-0 place-items-start lg:place-items-center"
+          className="grid grid-cols-2 gap-8 md:grid-cols-2 mb-8 lg:grid-cols-4 lg:gap-0 place-items-center lg:place-items-center mt-5 lg:mt-0"
         >
           <div className="flex flex-col gap-y-2 ">
             <FooterInfo text="info@abanc.co" icon="world" />
