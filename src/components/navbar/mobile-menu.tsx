@@ -31,11 +31,11 @@ const MobileMenu = () => {
             className="w-20 self-start object-cover"
           />
 
-          <div className="flex items-center justify-between border-2 my-4 px-4 w-full py-3 text-vermelho rounded-full">
+          <div className="flex items-center justify-between border-2 my-4 p-2 w-full text-vermelho rounded-full">
             <input
               type="text"
               placeholder="Pesquise algo..."
-              className="border-none outline-none text-base placeholder:text-base text-black placeholder:text-black"
+              className="border-none outline-none text-sm placeholder:text-sm text-black placeholder:text-black"
             />
             <button onClick={() => console.log("pesquisou mobile-navbar")}>
               <CiSearch size={22} />
@@ -47,11 +47,11 @@ const MobileMenu = () => {
               Navegação
             </h1>
 
-            <ul className="w-full flex flex-col items-start h-full justify-start gap-4 mt-8">
+            <ul className="w-full flex flex-col items-start h-full justify-start gap-2 mt-2">
               {NAV_LINKS.map((link, index) => (
                 <li key={index}>
                   <Link to={link.path}>
-                    <SheetClose className="uppercase text-base text-black text-start">
+                    <SheetClose className="uppercase text-xs text-black text-start">
                       {link.label}
                     </SheetClose>
                   </Link>
@@ -61,7 +61,7 @@ const MobileMenu = () => {
 
             <SheetFooter className="self-center mt-16">
               <div className="flex flex-col">
-                <h1 className="font-bold uppercase">Partilhe este site</h1>
+                <h1 className="font-bold text-xs uppercase">Partilhe este site</h1>
                 <div className="flex mt-4 items-center justify-between">
                   <FaFacebook size={24} />
                   <FaXTwitter size={24} />
