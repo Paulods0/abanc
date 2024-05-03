@@ -5,36 +5,29 @@ import HighlightSection from "@/components/home/highlight-section"
 import InflationSection from "@/components/home/inflation-section"
 import Slider from "@/components/home/slider"
 import FadeIn from "@/components/motion/fade-in"
-import InViewEffect from "@/components/motion/inview-effect"
 
 const HomePage = () => {
   return (
     <main className="min-h-screen pb-16">
-      <Container className="mt-12">
-        <FadeIn>
+      <FadeIn>
+        <Container className="mt-12">
           <Slider image="/banner/banner.png" />
-        </FadeIn>
-
-        <Container className="px-14 mt-12 space-y-20">
-          <InViewEffect>
-            <HighlightSection />
-          </InViewEffect>
-
-          <InViewEffect>
-            <EventSection />
-          </InViewEffect>
-
-          <InViewEffect>
-            <InflationSection />
-          </InViewEffect>
-
-          <InViewEffect>
-            <FinancialLiteracySection />
-          </InViewEffect>
         </Container>
-      </Container>
+        <div className="mt-12 space-y-20">
+          <HighlightSection />
+
+          <div className="w-full px-2 lg:p-6 bg-zinc-300/15">
+            <EventSection />
+          </div>
+
+          <InflationSection />
+          <FinancialLiteracySection />
+        </div>
+      </FadeIn>
     </main>
   )
 }
 
+// <Container className="mt-12">
+// </Container>
 export default HomePage

@@ -7,12 +7,16 @@ import PageLegislacao from "./pages/legislacao-e-regulamentacao/page-legislacao"
 import PagePublicacoes from "./pages/publicacoes/page-publicacoes"
 import PageSistemaFinanceiro from "./pages/sistema-financeiro/page-sistema-financeiro"
 import PageInstitucional from "./pages/institucional/page-institucional"
+import NavHeader from "./components/navbar/nav-header"
+import PageNotFound from "./pages/page-not-found"
 
 function App() {
   return (
     <main className="font-montSerrat">
-      <Navbar />
-      <main>
+      <NavHeader />
+
+      <main className="">
+        <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/institucional" element={<PageInstitucional />} />
@@ -29,6 +33,7 @@ function App() {
             path="/educação-financeira"
             element={<PageEducacaoFinanceira />}
           />
+          <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </main>
       <Footer />

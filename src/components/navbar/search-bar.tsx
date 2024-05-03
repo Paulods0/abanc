@@ -13,7 +13,7 @@ const SearchBar = () => {
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className="relative hidden md:hidden lg:flex text-vermelho items-center px-2 justify-center gap-x-2 rounded-full text-base"
+      className="relative hidden md:hidden lg:flex text-vermelho items-center h-[35px] px-2 justify-center gap-x-2 rounded-full text-base"
     >
       <div className="flex items-center">
         <motion.input

@@ -19,12 +19,12 @@ const FooterInfo = ({ type = "default", text, subtext, icon }: Props) => {
   return (
     <>
       {type === "default" ? (
-        <div className="flex text-vermelho items-center text-xs gap-x-2">
+        <div className="flex text-vermelho items-center text-sm gap-x-2">
           {icons[icon]}
           <span className="text-black">{text}</span>
         </div>
       ) : (
-        <div className="flex text-vermelho items-center text-xs gap-x-2">
+        <div className="flex text-vermelho items-start text-sm gap-x-2">
           <span>{icons[icon]}</span>
           <div className="flex flex-col">
             <span className="text-black">{text}</span>

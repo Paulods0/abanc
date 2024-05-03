@@ -35,7 +35,7 @@ const MobileMenu = () => {
             <input
               type="text"
               placeholder="Pesquise algo..."
-              className="border-none outline-none text-lg placeholder:text-lg text-black placeholder:text-black"
+              className="border-none outline-none text-base placeholder:text-base text-black placeholder:text-black"
             />
             <button onClick={() => console.log("pesquisou mobile-navbar")}>
               <CiSearch size={22} />
@@ -43,15 +43,15 @@ const MobileMenu = () => {
           </div>
 
           <section className="flex flex-col mt-12 w-full justify-between items-start">
-            <h1 className="font-bold text-zinc-800 uppercase text-xl underline">
+            <h1 className="font-bold text-zinc-800 uppercase text-base underline">
               Navegação
             </h1>
 
-            <ul className="w-full flex flex-col items-start h-full justify-start gap-6 mt-8">
+            <ul className="w-full flex flex-col items-start h-full justify-start gap-4 mt-8">
               {NAV_LINKS.map((link, index) => (
                 <li key={index}>
                   <Link to={link.path}>
-                    <SheetClose className="uppercase text-lg text-black text-start">
+                    <SheetClose className="uppercase text-base text-black text-start">
                       {link.label}
                     </SheetClose>
                   </Link>
@@ -59,7 +59,7 @@ const MobileMenu = () => {
               ))}
             </ul>
 
-            <SheetFooter className="self-center mt-36">
+            <SheetFooter className="self-center mt-16">
               <div className="flex flex-col">
                 <h1 className="font-bold uppercase">Partilhe este site</h1>
                 <div className="flex mt-4 items-center justify-between">

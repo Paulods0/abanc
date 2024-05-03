@@ -1,6 +1,5 @@
-import Autoplay from "embla-carousel-autoplay"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination } from "swiper/modules"
+import { Navigation, Pagination, Autoplay } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/navigation"
@@ -13,26 +12,21 @@ type Props = {
 
 const Slider = ({ image }: Props) => {
   return (
-    <div className="w-full px-14 lg:px-0">
+    <div className="w-full px-3 lg:px-0">
       <Swiper
         slidesPerView={1}
         spaceBetween={50}
         modules={[Autoplay, Pagination, Navigation]}
         pagination={{ clickable: true }}
-        autoplay={true}
+        autoplay
         navigation
-        breakpoints={{
-          430: {
-            navigation: false,
-          },
-        }}
       >
         {Array.from({ length: 4 }).map((_, i) => (
           <SwiperSlide key={i} className="rounded-xl">
             <div className="relative flex items-center justify-center">
               <img
                 src={image}
-                className="object-center lg:object-cover h-[250px] md:h-full lg:h-full rounded-xl"
+                className="object-cover h-[250px] md:h-full lg:h-full rounded-xl"
                 alt="slider-images"
               />
 

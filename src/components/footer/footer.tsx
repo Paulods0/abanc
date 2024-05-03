@@ -18,7 +18,6 @@ const Footer = () => {
 
   return (
     <footer className="relative w-full bg-black/20 rounded-t-xl flex flex-col">
-
       <div
         onMouseEnter={handleOnMouseEnter}
         onMouseLeave={handleOnMouseLeave}
@@ -31,10 +30,11 @@ const Footer = () => {
         onMouseEnter={handleOnMouseEnter}
         onMouseLeave={handleOnMouseLeave}
         animate={{
-          height: hovered ? "250px" : "0px",
+          height: hovered ? "auto" : "0px",
+          marginBottom: hovered ? "32px" : "0px",
         }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="lg:grid grid-cols-3 place-items-center my-2 hidden overflow-hidden"
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="lg:grid grid-cols-3 place-items-start gap-8 mt-6 mx-auto my-2 hidden overflow-hidden origin-top"
       >
         <FooterHeadInfo
           title={FOOTER_LINKS[0].title}
@@ -66,7 +66,8 @@ const Footer = () => {
       </motion.section>
 
       <Container className="px-6 lg:px-2 mt-2">
-        <section className="grid grid-cols-2 lg:hidden place-items-start gap-6 my-2 overflow-hidden">
+        {/**MOBILE */}
+        <section className="hidden grid-cols-2 lg:hidden place-items-start gap-6 my02 overflow-hidden">
           <FooterHeadInfo
             title={FOOTER_LINKS[0].title}
             texts={FOOTER_LINKS[0].texts}
@@ -90,8 +91,13 @@ const Footer = () => {
             texts={FOOTER_LINKS[1].texts}
           />
         </section>
+        {/** END MOBILE */}
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-2 my-4 lg:grid-cols-4 lg:gap-0 place-items-start lg:place-items-center">
+        <div
+          onMouseEnter={handleOnMouseEnter}
+          onMouseLeave={handleOnMouseLeave}
+          className="grid grid-cols-2 gap-4 md:grid-cols-2 mb-8 lg:grid-cols-4 lg:gap-0 place-items-start lg:place-items-center"
+        >
           <div className="flex flex-col gap-y-2 ">
             <FooterInfo text="info@abanc.co" icon="world" />
             <FooterInfo text="222 712 228" icon="phone" />
@@ -115,17 +121,19 @@ const Footer = () => {
             />
           </div>
 
-          <div className="flex flex-col items-center gap-y-2">
-            <h1 className="text-vermelho font-bold">Partilhe este site</h1>
+          <div className="flex flex-col items-start gap-y-2">
+            <h1 className="text-vermelho text-sm font-bold">
+              Partilhe este site
+            </h1>
             <div className="flex items-center gap-x-4">
               <a href="https://facebook.com" target="_blank">
-                <FaFacebook />
+                <FaFacebook size={20} />
               </a>
               <a href="https://facebook.com" target="_blank">
-                <FaXTwitter />
+                <FaXTwitter size={20} />
               </a>
               <a href="mailto:pauloluguenda0@gmail.com" target="_blank">
-                <CgMail />
+                <CgMail size={20} />
               </a>
             </div>
           </div>
@@ -133,14 +141,14 @@ const Footer = () => {
       </Container>
 
       <section className="flex text-xs py-3 bg-vermelho">
-        <Container className="grid grid-cols-2 gap-6 md:gap-0 md:grid-cols-4 text-xs text-white px-14">
+        <Container className="flex items-center justify-between flex-wrap gap-6 md:gap-0 text-xs text-white px-14">
           <p>&copy; ABANC Todos os direitos reservados</p>
           <p className="capitalize">política de privacidade</p>
           <p className="capitalize">política de cookies</p>
           <p className="capitalize">cancelar newsletter</p>
+          <p className="capitalize">cancelar newsletter</p>
         </Container>
       </section>
-      
     </footer>
   )
 }

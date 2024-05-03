@@ -1,15 +1,18 @@
 import { Card } from "../ui/card"
 
 type Props = {
-  videoURL: string
+  youtubeVideoURL: string
 }
 
-const VideoCard = ({ videoURL }: Props) => {
+const VideoCard = ({ youtubeVideoURL }: Props) => {
+  const videoURL = youtubeVideoURL.split("/watch?v=").join("/embed/")!!
+
   return (
     <Card className="rounded-lg">
-      <video controls className="w-full h-auto rounded-lg object-cover">
-        <source src={videoURL} />
-      </video>
+      <iframe
+        src={videoURL}
+        className="w-full h-full aspect-video rounded-lg object-cover"
+      />
     </Card>
   )
 }
