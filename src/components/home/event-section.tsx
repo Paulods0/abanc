@@ -58,12 +58,15 @@ const EventSection = () => {
                 {Array.from({ length: 3 }).map((_, i) => (
                   <li
                     key={i}
-                    className="flex gap-4 lg:gap-0 items-center border-b"
+                    className="flex gap-4 lg:gap-2 items-center border-b"
                   >
-                    <h1 className="text-vermelho font-bold text-md">14 Mar.</h1>
-                    <p className="text-xs lg:text-sm text-zinc-400">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Velit, aliquam.
+                    <h1 className="text-vermelho font-bold text-base">
+                      14 Mar.
+                    </h1>
+
+                    <p className="text-sm lg:text-sm text-zinc-400 line-clamp-none">
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      adipisicing cing.
                     </p>
                   </li>
                 ))}
