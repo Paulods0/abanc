@@ -1,5 +1,5 @@
 import Container from "../container"
-import VideoCard from "./video-card"
+import VideoDialog from "./video-dialog"
 
 const FinancialLiteracySection = () => {
   return (
@@ -10,9 +10,13 @@ const FinancialLiteracySection = () => {
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-8">
-          <VideoCard youtubeVideoURL="https://www.youtube.com/watch?v=kcVZknz-EfA" />
-          <VideoCard youtubeVideoURL="https://www.youtube.com/watch?v=kcVZknz-EfA" />
-          <VideoCard youtubeVideoURL="https://www.youtube.com/watch?v=kcVZknz-EfA" />
+          {Array.from({ length: 3 }).map((_, i) => (
+            <VideoDialog
+              key={i}
+              videoTitle={`Title test ${i + 1}`}
+              videoURL="https://www.youtube.com/watch?v=kcVZknz-EfA"
+            />
+          ))}
         </div>
       </section>
     </Container>
