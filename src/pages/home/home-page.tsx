@@ -28,6 +28,4 @@ const HomePage = () => {
   )
 }
 
-// <Container className="mt-12">
-// </Container>
 export default HomePage
