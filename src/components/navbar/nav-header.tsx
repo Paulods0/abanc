@@ -2,12 +2,8 @@ import { BsTelephone } from "react-icons/bs"
 
 const NavHeader = () => {
   return (
-    <div className="flex justify-between bg-black/10  items-center">
-      <span className="border-r border-r-black/30 px-2 text-black/50 text-xs">
-        Mercados Angola
-      </span>
-
-      <div className="flex items-center h-full gap-x-4 pr-2 md:pr-0">
+    <div className="flex justify-end bg-black/10  items-center">
+      <div className="flex  items-center h-full gap-x-4 pr-2 md:pr-0">
         {Array.from({ length: 3 }).map((_, i) => (
           <p key={i} className="text-[9px] md:text-xs">
             Lorem
