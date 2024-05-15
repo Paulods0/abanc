@@ -21,7 +21,7 @@ const EventCard = ({ image }: Props) => {
       <div className="w-full lg:h-full p-3">
         <span className="text-xs text-zinc-500">13, Março 2023</span>
         <div className="flex mt-2 gap-2 flex-col">
-          <h4 className="text-md text-vermelho font-semibold">
+          <h4 className="md:text-xl text-base line-clamp-2 text-vermelho font-semibold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h4>
           <p className="text-sm text-zinc-500">

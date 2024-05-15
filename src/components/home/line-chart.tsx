@@ -65,7 +65,7 @@ const LineChart = () => {
     ],
   }
   return (
-    <Card className="bg-white rounded-lg shadow-lg w-full p-2 ">
+    <Card className="bg-white rounded-3xl shadow-lg w-full p-2 ">
       <CardHeader>
         <CardTitle className="text-vermelho text-lg font-semibold uppercase ">
           taxa de inflação

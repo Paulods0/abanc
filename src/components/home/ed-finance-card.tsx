@@ -6,7 +6,7 @@ type Props = {
 
 const EdFinanceCard = ({ title }: Props) => {
   return (
-    <Card className="bg-white rounded-lg shadow-lg w-full p-4 flex flex-col">
+    <Card className="bg-white rounded-3xl shadow-lg w-full p-4 flex flex-col">
       <CardHeader>
         <CardTitle className="text-white text-sm px-4 py-1 font-medium uppercase bg-black/80 w-full rounded-full">
           {title}
