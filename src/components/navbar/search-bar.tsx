@@ -10,6 +10,7 @@ const SearchBar = () => {
     <motion.div
       animate={{
         border: hovered ? "1px solid #dddddd" : "1px solid transparent",
+        marginLeft: hovered ? "6px" : "0px",
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -26,7 +27,7 @@ const SearchBar = () => {
       </div>
 
       <button onClick={() => console.log("pesquisou")}>
-        <CiSearch size={22} />
+        <CiSearch size={28} />
       </button>
     </motion.div>
   )

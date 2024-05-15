@@ -11,7 +11,7 @@ const NavHeader = () => {
           </p>
         ))}
 
-        <div className="hidden rounded-l-full bg-gradient-to-br from-vermelho to-black/70 h-full md:flex items-center px-3 py-3 space-x-2">
+        <div className="hidden bg-gradient-to-br from-vermelho to-black/70 h-full md:flex items-center px-3 py-3 space-x-2">
           <a
             href="tel:+244-941-685-402"
             className="text-white text-xs flex items-center capitalize gap-x-2"

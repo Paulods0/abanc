@@ -14,16 +14,16 @@ const Navbar = () => {
   return (
     <header className="flex sticky top-0 flex-col pb-4 pt-1 border-b z-20 bg-white">
       <Container>
-        <section className="flex px-3 lg:px-0 items-center md:items-end lg:items-end justify-between">
+        <section className="flex px-3 lg:px-0 items-center md:items-end justify-between">
           <Link to={"/"}>
             <img
               src="/logo/logo-2.png"
-              className="w-20 h-auto md:w-40 object-cover"
+              className="w-20 h-auto md:w-36 object-cover"
               alt="logotipo"
             />
           </Link>
 
-          <nav className=" hidden md:hidden lg:flex items-center mb-[calc(160px/20)]">
+          <nav className=" hidden md:hidden lg:flex items-center ">
             <ul className="flex items-center gap-x-6 ">
               {NAV_LINKS.map((link, i) => (
                 <motion.li key={i} className="relative cursor-pointer group">
@@ -39,8 +39,8 @@ const Navbar = () => {
                 </motion.li>
               ))}
             </ul>
+            <SearchBar />
           </nav>
-          <SearchBar />
 
           <div className="mt-2">
             <MobileMenu />
