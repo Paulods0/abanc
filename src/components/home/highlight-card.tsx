@@ -19,7 +19,7 @@ const HighlightCard = ({ content, title }: Props) => {
       transition={{ duration: 0.2 }}
       className="border-b mt-2 items-start bg-white flex flex-col space-y--3 lg:space-y-1 "
     >
-      <h1 className="text-vermelho text-lg lg:text-sm uppercase font-semibold">
+      <h1 className="text-vermelho text-lg lg:text-xl capitalize font-semibold">
         {title}
       </h1>
 

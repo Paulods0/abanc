@@ -6,7 +6,7 @@ import "swiper/css/pagination"
 
 const MiniSlider = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
@@ -15,10 +15,11 @@ const MiniSlider = () => {
         autoplay
       >
         {Array.from({ length: 4 }).map((_, i) => (
-          <SwiperSlide key={i} className="relative ">
+          <SwiperSlide key={i} className="relative w-full h-full">
             <img
+              loading="lazy"
               src="/cifrao.jpg"
-              className="rounded-t-xl h-60 md:h-80 w-full aspect-square lg:h-72"
+              className="rounded-t-xl h-60 md:h-80 w-full aspect-square lg:h-80"
               alt="slider-images"
             />
           </SwiperSlide>
