@@ -6,6 +6,9 @@ type Props = {
 }
 
 const DropDownNavbar = ({ link }: Props) => {
+  const handleNavigate = (link: string) => {
+    return decodeURIComponent(link).replace(/ /g, "-")
+  }
   return (
     <motion.ul
       initial={{ opacity: 0, y: -20 }}
@@ -19,7 +22,7 @@ const DropDownNavbar = ({ link }: Props) => {
           whileHover={{ color: "#c64034" }}
           key={i}
         >
-          <Link className="capitalize text-sm" to={`/${li}`}>
+          <Link className="capitalize text-sm" to={`/${handleNavigate(li)}`}>
             {li}
           </Link>
         </motion.li>

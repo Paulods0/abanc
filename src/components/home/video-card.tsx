@@ -8,10 +8,10 @@ const VideoCard = ({ youtubeVideoURL }: Props) => {
   const videoURL = youtubeVideoURL.split("/watch?v=").join("/embed/")!!
 
   return (
-    <Card className="rounded-lg">
+    <Card className="rounded-2xl">
       <iframe
         src={videoURL}
-        className="w-full h-full aspect-video rounded-lg object-cover"
+        className="w-full h-full aspect-video rounded-2xl object-cover"
       />
     </Card>
   )

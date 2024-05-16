@@ -11,6 +11,10 @@ const Navbar = () => {
   const location = useLocation().pathname
   const currentPath = decodeURIComponent(location)
 
+  const handleNavigate = (link: string) => {
+    return decodeURIComponent(link).replace(/ /g, "-")
+  }
+
   return (
     <header className="flex sticky top-0 flex-col pb-4 pt-1 border-b z-20 bg-white">
       <Container>
@@ -27,13 +31,14 @@ const Navbar = () => {
             <ul className="flex items-center gap-x-6 ">
               {NAV_LINKS.map((link, i) => (
                 <motion.li key={i} className="relative cursor-pointer group">
-                  <p
+                  <Link
+                    to={`${link.path}/${decodeURI(link.links[0])}`}
                     className={`capitalize  text-sm hover:text-vermelho font-semibold duration-200 transition-all ${
                       currentPath === link.path ? "text-vermelho" : "text-black"
                     }`}
                   >
                     {link.label}
-                  </p>
+                  </Link>
 
                   <DropDownNavbar link={link.links} />
                 </motion.li>

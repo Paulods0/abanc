@@ -76,7 +76,7 @@ export const NAV_LINKS = [
   {
     path: "/publicações",
     label: "publicações",
-    links: ["relatórios", "estatísticas", "textos e apresentações"],
+    links: ["relatorios", "estatísticas", "textos e apresentações"],
   },
 
   {

@@ -145,7 +145,7 @@ const Footer = () => {
           <p>&copy; ABANC Todos os direitos reservados</p>
           <p className="capitalize">política de privacidade</p>
           <p className="capitalize">política de cookies</p>
-          <p className="capitalize">cancelar newsletter</p>
+          <p className="capitalize">subscrever à newsletter</p>
           <p className="capitalize">cancelar newsletter</p>
         </Container>
       </section>
