@@ -1,12 +1,13 @@
-import Container from "@/components/container"
+// import Container from "@/components/container"
+import FadeIn from "@/components/motion/fade-in"
 import { Outlet } from "react-router-dom"
 
 const PagePublicacoes = () => {
   return (
-    <main className="w-full h-full lg:px-6 flex mb-20 mt-4 flex-col">
-      <Container>
+    <main>
+      <FadeIn>
         <Outlet />
-      </Container>
+      </FadeIn>
     </main>
   )
 }

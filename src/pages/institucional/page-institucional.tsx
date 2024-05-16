@@ -1,10 +1,14 @@
 import Container from "@/components/container"
+import FadeIn from "@/components/motion/fade-in"
+import { Outlet } from "react-router-dom"
 
 const PageInstitucional = () => {
   return (
-    <main className="w-full h-screen lg:px-6 flex mb-20 mt-12 flex-col">
+    <main className="w-full lg:px-6 flex mb-20 mt-12 flex-col">
       <Container>
-        <p>Institucional</p>
+        <FadeIn>
+          <Outlet />
+        </FadeIn>
       </Container>
     </main>
   )

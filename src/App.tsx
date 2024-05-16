@@ -10,6 +10,8 @@ import PageInstitucional from "./pages/institucional/page-institucional"
 import NavHeader from "./components/navbar/nav-header"
 import PageNotFound from "./pages/page-not-found"
 import ReportPage from "./pages/publicacoes/report-page"
+import PageMission from "./pages/institucional/page-mission"
+import PagesWrapper from "./components/pages-wrapper"
 // import { lazy, Suspense } from "react"
 
 // const HomePage = lazy(() => import("./pages/home/home-page"))
@@ -25,25 +27,36 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/institucional" element={<PageInstitucional />} />
 
-          <Route path="/publicações" element={<PagePublicacoes />}>
-            <Route path="relatorios" element={<ReportPage />} />
+          <Route path="/" element={<PagesWrapper />}>
+
+
+            <Route path="institucional/" element={<PageInstitucional />}>
+              <Route path="missão-e-objecto-social" element={<PageMission />} />
+            </Route>
+
+            <Route path="publicações/" element={<PagePublicacoes />}>
+              <Route path="relatórios" element={<ReportPage />} />
+            </Route>
+
+            <Route
+              path="/sistema-financeiro"
+              element={<PageSistemaFinanceiro />}
+            />
+
+            <Route
+              path="/legislação-e-regulamentação"
+              element={<PageLegislacao />}
+            />
+
+            <Route
+              path="/educação-financeira"
+              element={<PageEducacaoFinanceira />}
+            />
+
+            <Route path="/*" element={<PageNotFound />} />
+
           </Route>
-
-          <Route
-            path="/sistema-financeiro"
-            element={<PageSistemaFinanceiro />}
-          />
-          <Route
-            path="/legislação-e-regulamentação"
-            element={<PageLegislacao />}
-          />
-          <Route
-            path="/educação-financeira"
-            element={<PageEducacaoFinanceira />}
-          />
-          <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </main>
       <Footer />
