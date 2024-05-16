@@ -2,7 +2,7 @@ import Container from "@/components/container"
 import EventSection from "@/components/home/event-section"
 import FinancialLiteracySection from "@/components/home/financial-literacy-section"
 import HighlightSection from "@/components/home/highlight-section"
-import InflationSection from "@/components/home/inflation-section"
+// import InflationSection from "@/components/home/inflation-section"
 import Slider from "@/components/home/slider"
 import FadeIn from "@/components/motion/fade-in"
 
@@ -20,7 +20,7 @@ const HomePage = () => {
             <EventSection />
           </div>
 
-          <InflationSection />
+          {/* <InflationSection /> */}
           <FinancialLiteracySection />
         </div>
       </FadeIn>

@@ -23,14 +23,12 @@ function App() {
     <main className="font-montSerrat">
       <NavHeader />
 
-      <main className="">
+      <main>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
 
           <Route path="/" element={<PagesWrapper />}>
-
-
             <Route path="institucional/" element={<PageInstitucional />}>
               <Route path="missão-e-objecto-social" element={<PageMission />} />
             </Route>
@@ -55,10 +53,10 @@ function App() {
             />
 
             <Route path="/*" element={<PageNotFound />} />
-
           </Route>
         </Routes>
       </main>
+
       <Footer />
     </main>
   )
