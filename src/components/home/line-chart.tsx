@@ -67,7 +67,7 @@ const LineChart = () => {
   }
   return (
     <CardScaleDownEffect>
-      <Card className="bg-white rounded-3xl shadow-lg w-full p-[8px] ">
+      <Card className="bg-white rounded-3xl shadow-lg w-full p-[4px] ">
         <CardHeader>
           <CardTitle className="text-vermelho text-lg font-semibold uppercase ">
             taxa de inflação
