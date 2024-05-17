@@ -100,33 +100,6 @@ const EventSection = () => {
             />
           </div>
         </div>
-
-        <div className="mt-4">
-          <h1 className="text-xl mb-4 text-vermelho font-bold capitalize">
-            eventos
-          </h1>
-
-          <ul className="flex flex-col gap-6">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <li key={i} className="flex gap-4 lg:gap-2 items-center border-b">
-                <h1 className="text-vermelho font-bold md:text-xl text-base">
-                  14 Mar.
-                </h1>
-
-                <p className="text-sm lg:text-sm text-zinc-400 line-clamp-none">
-                  Lorem ipsum dolor sit amet consectetur adipisicing adipisicing
-                  cing.
-                </p>
-              </li>
-            ))}
-            <a
-              href={""}
-              className="text-xs underline text-vermelho font-medium self-end"
-            >
-              Ver todos
-            </a>
-          </ul>
-        </div>
       </section>
     </Container>
   )

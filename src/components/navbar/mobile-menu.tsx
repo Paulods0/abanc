@@ -11,8 +11,15 @@ import { Link } from "react-router-dom"
 import { CgMail } from "react-icons/cg"
 import { FaXTwitter } from "react-icons/fa6"
 import { FaFacebook } from "react-icons/fa"
-
 import { CiSearch } from "react-icons/ci"
+import { RiArrowDropDownLine } from "react-icons/ri"
+
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "../ui/collapsible"
+import { useState } from "react"
 
 const MobileMenu = () => {
   return (
@@ -42,34 +49,46 @@ const MobileMenu = () => {
             </button>
           </div>
 
-          <section className="flex flex-col mt-12 w-full justify-between items-start">
-            <h1 className="font-bold text-zinc-800 uppercase text-base underline">
-              Navegação
-            </h1>
-
-            <ul className="w-full flex flex-col items-start h-full justify-start gap-2 mt-2">
-              {NAV_LINKS.map((link, index) => (
-                <li key={index}>
-                  <Link to={link.path}>
-                    <SheetClose className="uppercase text-xs text-black text-start">
+          <ul className="w-full flex flex-col items-start h-[300px] custom-scrollbar overflow-y-auto justify-start gap-2 mt-2">
+            {NAV_LINKS.map((link, index) => (
+              <li key={index} className="cursor-pointer">
+                <Collapsible>
+                  <CollapsibleTrigger
+                    className="font-semibold uppercase"
+                    asChild
+                  >
+                    <div className="flex items-center text-vermelho line-clamp-1 gap-2 w-full">
                       {link.label}
-                    </SheetClose>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                      <RiArrowDropDownLine />
+                    </div>
+                  </CollapsibleTrigger>
 
-            <SheetFooter className="self-center mt-16">
-              <div className="flex flex-col">
-                <h1 className="font-bold text-xs uppercase">Partilhe este site</h1>
-                <div className="flex mt-4 items-center justify-between">
-                  <FaFacebook size={24} />
-                  <FaXTwitter size={24} />
-                  <CgMail size={24} />
-                </div>
+                  {link.links.map((sublink, index) => (
+                    <CollapsibleContent key={index} className="ml-4 mb-3">
+                      <SheetClose asChild className="underline capitalize">
+                        <Link to={`/${link.label}/${sublink.link}`}>
+                          {sublink.label}
+                        </Link>
+                      </SheetClose>
+                    </CollapsibleContent>
+                  ))}
+                </Collapsible>
+              </li>
+            ))}
+          </ul>
+
+          <SheetFooter className="self-center mt-16">
+            <div className="flex flex-col">
+              <h1 className="font-bold text-xs uppercase">
+                Partilhe este site
+              </h1>
+              <div className="flex mt-4 items-center justify-between">
+                <FaFacebook size={24} />
+                <FaXTwitter size={24} />
+                <CgMail size={24} />
               </div>
-            </SheetFooter>
-          </section>
+            </div>
+          </SheetFooter>
         </SheetContent>
       </Sheet>
     </div>

@@ -1,8 +1,10 @@
 import Container from "@/components/container"
 
 import { Button } from "@/components/ui/button"
+import { Collapsible, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { CollapsibleContent } from "@radix-ui/react-collapsible"
 import { useSearchParams } from "react-router-dom"
-
+import { RiArrowDropDownLine } from "react-icons/ri"
 const REPORTS = [
   {
     value: "1",
@@ -28,9 +30,12 @@ const ReportPage = () => {
   const FILTERED_REPORPS = REPORTS.filter(
     (report) => report.value === reportValue
   )
+  const reportName = FILTERED_REPORPS.find(
+    (report) => report.value === report.value
+  )?.name
 
   return (
-    <main className="">
+    <main className="pb-16">
       <Container className="mt-8 w-full">
         <div className="mt-6 text-justify">
           <p className="text-lg ">
@@ -53,7 +58,7 @@ const ReportPage = () => {
 
         <div className="w-full mt-6 flex flex-col">
           <div className="w-full font-semibold flex justify-between items-center border-b pb-2 mb-4 capitalize text-vermelho">
-            <div>7ª edição</div>
+            <div>{reportName}</div>
             <div>edições anteriores</div>
           </div>
 
@@ -82,20 +87,32 @@ const ReportPage = () => {
             </div>
 
             <div className="flex lg:flex-col flex-wrap lg:place-self-start w-full gap-2">
-              {REPORTS.map((file, index) => (
-                <Button
-                  key={index}
-                  variant={"outline"}
-                  className={`w-full ${
-                    reportValue === (index + 1).toString()
-                      ? "bg-vermelho  text-white"
-                      : "text-black"
-                  }`}
-                  onClick={() => handleReportChange((index + 1).toString())}
-                >
-                  {file.name}
-                </Button>
-              ))}
+              <Collapsible>
+                <CollapsibleTrigger asChild className="mb-2">
+                  <Button
+                    className="w-full flex items-center gap-2"
+                    variant={"outline"}
+                  >
+                    Edições
+                    <RiArrowDropDownLine />
+                  </Button>
+                </CollapsibleTrigger>
+
+                {REPORTS.map((file, index) => (
+                  <CollapsibleContent key={index} asChild>
+                    <button
+                      className={`w-full py-2 px-1 cursor-pointer rounded-lg underline ${
+                        reportValue === (index + 1).toString()
+                          ? "text-vermelho"
+                          : "text-black"
+                      }`}
+                      onClick={() => handleReportChange((index + 1).toString())}
+                    >
+                      {file.name}
+                    </button>
+                  </CollapsibleContent>
+                ))}
+              </Collapsible>
             </div>
           </div>
         </div>

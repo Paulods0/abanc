@@ -32,20 +32,21 @@ const PagesWrapper = () => {
   return (
     <Container className="flex flex-col pt-6 pb-12">
       <div className="flex flex-col w-full">
-        <h1 className="text-[#A39161] border-b pb-3 uppercase text-lg md:text-xl lg:text-2xl font-semibold">
+        <h1 className="text-[#A39161] border-b pb-3 uppercase text-base md:text-xl lg:text-2xl font-semibold">
           {currentURL}
         </h1>
 
         <div className="w-full border-b pb-3 flex mt-4 justify-between items-center">
           <div className="flex items-center gap-4">
             {SOCIAL_MEDIAS.map((link, indx) => (
-              <Link
+              <a
                 key={indx}
+                target="_blank"
                 className={`text-lg p-2 rounded-full ${link.color}`}
-                to={link.link}
+                href={link.link}
               >
                 {link.icon}
-              </Link>
+              </a>
             ))}
           </div>
 

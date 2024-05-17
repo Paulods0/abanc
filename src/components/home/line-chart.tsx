@@ -16,6 +16,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card"
+import CardScaleDownEffect from "../motion/card-scale-down"
 
 ChartJS.register(
   CategoryScale,
@@ -65,20 +66,22 @@ const LineChart = () => {
     ],
   }
   return (
-    <Card className="bg-white rounded-3xl shadow-lg w-full p-2 ">
-      <CardHeader>
-        <CardTitle className="text-vermelho text-lg font-semibold uppercase ">
-          taxa de inflação
-        </CardTitle>
-        <CardDescription className="capitalize font-semibold text-zinc-600 text-[12px]">
-          últimos 12 meses
-        </CardDescription>
-      </CardHeader>
+    <CardScaleDownEffect>
+      <Card className="bg-white rounded-3xl shadow-lg w-full p-[15px] ">
+        <CardHeader>
+          <CardTitle className="text-vermelho text-lg font-semibold uppercase ">
+            taxa de inflação
+          </CardTitle>
+          <CardDescription className="capitalize font-semibold text-zinc-600 text-[12px]">
+            últimos 12 meses
+          </CardDescription>
+        </CardHeader>
 
-      <CardContent className="w-full p-0">
-        <Line options={options} data={data} />
-      </CardContent>
-    </Card>
+        <CardContent className="w-full p-0">
+          <Line options={options} data={data} />
+        </CardContent>
+      </Card>
+    </CardScaleDownEffect>
   )
 }
 

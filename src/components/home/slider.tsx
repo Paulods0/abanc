@@ -20,6 +20,7 @@ const Slider = ({ image }: Props) => {
         pagination={{ clickable: true }}
         autoplay
         navigation
+        className="rounded-[45px]"
       >
         {Array.from({ length: 3 }).map((_, i) => (
           <SwiperSlide key={i} className="rounded-[45px] w-full">
