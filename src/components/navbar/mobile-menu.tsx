@@ -19,7 +19,6 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "../ui/collapsible"
-import { useState } from "react"
 
 const MobileMenu = () => {
   return (
