@@ -8,7 +8,7 @@ import FadeIn from "@/components/motion/fade-in"
 
 const HomePage = () => {
   return (
-    <main className="min-h-screen pb-16">
+    <main className="min-h-screen mb-40 lg:mb-0 pb-16">
       <FadeIn>
         <Container className="my-6">
           <Slider image="/banner/banner.png" />

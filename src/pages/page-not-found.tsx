@@ -4,7 +4,7 @@ const PageNotFound = () => {
   return (
     <main className="h-screen w-full justify-center flex items-center flex-col">
       <h1 className="font-bold text-2xl md:text-4xl mb-12">
-        Página não encontrada
+        Página não montada ainda
       </h1>
 
       <motion.a

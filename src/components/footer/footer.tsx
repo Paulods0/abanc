@@ -9,6 +9,7 @@ import { FOOTER_LINKS } from "@/constants"
 import FooterHeadInfo from "./footer-head-info"
 import { motion } from "framer-motion"
 import { useState } from "react"
+import NewsletterDialog from "./newsletter-dialog"
 
 const Footer = () => {
   const [hovered, setHovered] = useState(false)
@@ -27,7 +28,7 @@ const Footer = () => {
           animate={{ height: hovered ? 300 : 0 }}
           className="w-full bg-neutral-300 overflow-y-hidden"
         >
-          <div className="w-full flex items-start pt-8 justify-between px-24">
+          <div className="w-full lg:w-[1540px] mx-auto flex items-start pt-8 justify-between px-24">
             <FooterHeadInfo
               title={FOOTER_LINKS[0].title}
               texts={FOOTER_LINKS[0].texts}
@@ -61,13 +62,13 @@ const Footer = () => {
       </section>
 
       <section className="w-full flex flex-col z-20 self-end">
-        <div className="w-full bg-neutral-300 py-3 lg:h-28 grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-0 place-items-center lg:place-items-center mt-5 lg:mt-0">
-          <div className="flex flex-col gap-y-2 ">
+        <div className="w-full bg-neutral-300 p-8 lg:py-3 lg:h-28 grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-0 place-items-start md:place-items-center mt-5 lg:mt-0">
+          <div className="flex  flex-col gap-y-2 lg:w-auto md:items-center lg:items-start w-full ">
             <FooterInfo text="info@abanc.co" icon="world" />
             <FooterInfo text="222 712 228" icon="phone" />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex md:items-center lg:items-start flex-col w-full lg:w-auto ">
             <FooterInfo
               type="uno"
               text="Travessa Ho Chin Min,"
@@ -76,7 +77,7 @@ const Footer = () => {
             />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex  flex-col w-full lg:w-auto  md:items-center lg:items-start">
             <FooterInfo
               type="uno"
               text="Torre B, Piso 17, Maianga,"
@@ -85,7 +86,7 @@ const Footer = () => {
             />
           </div>
 
-          <div className="flex flex-col items-start gap-y-2">
+          <div className="flex  flex-col items-start gap-y-2 w-full lg:w-auto  md:items-center lg:items-start">
             <h1 className="text-vermelho text-sm font-bold">
               Partilhe este site
             </h1>
@@ -104,11 +105,18 @@ const Footer = () => {
         </div>
 
         <section className="flex text-xs py-3 bg-vermelho">
-          <Container className="flex items-center md:justify-around space-x-10 gap-4 lg:gap-0 flex-wrap md:gap-0 text-xs text-white px-14">
-            <p>&copy; ABANC Todos os direitos reservados</p>
-            <p className="capitalize">política de privacidade</p>
-            <p className="capitalize">política de cookies</p>
-            <p className="capitalize">subscrever newsletter</p>
+          <Container className="flex items-start md:justify-around md:space-x-10 gap-4 lg:gap-0 flex-col-reverse md:flex-row md:gap-0 text-xs text-white px-14">
+            <p className="text-base lg:text-sm">
+              &copy; ABANC Todos os direitos reservados
+            </p>
+            <p className="text-base lg:text-sm capitalize">
+              política de privacidade
+            </p>
+            <p className="text-base lg:text-sm capitalize">
+              política de cookies
+            </p>
+
+            <NewsletterDialog />
           </Container>
         </section>
       </section>

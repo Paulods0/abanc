@@ -55,7 +55,6 @@ const LineChart = () => {
     labels,
     datasets: [
       {
-        label: "Vendas",
         data: [
           1500, 2000, 1800, 2500, 3000, 2800, 3500, 4000, 3800, 4200, 4500,
           4800,
@@ -67,18 +66,32 @@ const LineChart = () => {
   }
   return (
     <CardScaleDownEffect>
-      <Card className="bg-white rounded-3xl shadow-lg w-full p-[4px] ">
-        <CardHeader>
-          <CardTitle className="text-vermelho text-lg font-semibold uppercase ">
+      <Card className="bg-white rounded-3xl shadow-lg w-full p-4 ">
+        <CardHeader className="mb-0 pb-5">
+          <CardTitle className="text-vermelho text-lg font-semibold uppercase flex flex-col w-full rounded-full">
             taxa de inflação
+            <h6 className="capitalize font-semibold text-zinc-600 text-xs">
+              últimos 12 meses
+            </h6>
           </CardTitle>
-          <CardDescription className="capitalize font-semibold text-zinc-600 text-[12px]">
-            últimos 12 meses
-          </CardDescription>
         </CardHeader>
 
-        <CardContent className="w-full p-0">
-          <Line options={options} data={data} />
+        <CardContent className="w-full p-0 pb-0">
+          <Line
+            options={{
+              plugins: {
+                legend: {
+                  display: false,
+                },
+              },
+              datasets: {
+                line: {
+                  indexAxis: "x",
+                },
+              },
+            }}
+            data={data}
+          />
         </CardContent>
       </Card>
     </CardScaleDownEffect>
