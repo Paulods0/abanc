@@ -9,13 +9,7 @@ import {
   Legend,
 } from "chart.js"
 import { Line } from "react-chartjs-2"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import CardScaleDownEffect from "../motion/card-scale-down"
 
 ChartJS.register(
@@ -29,17 +23,17 @@ ChartJS.register(
 )
 
 const LineChart = () => {
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top" as const,
-      },
-      title: {
-        display: false,
-      },
-    },
-  }
+  // const options = {
+  //   responsive: true,
+  //   plugins: {
+  //     legend: {
+  //       position: "top" as const,
+  //     },
+  //     title: {
+  //       display: false,
+  //     },
+  //   },
+  // }
 
   const labels = [
     "Janeiro",
