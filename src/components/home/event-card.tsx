@@ -9,7 +9,8 @@ type Props = {
 const EventCard = ({ image }: Props) => {
   return (
     <motion.div
-      whileHover={{ scale: 0.97 }}
+      whileHover={{ scale: 0.98 }}
+      transition={{ duration: 0.2 }}
       className="bg-white w-full cursor-pointer h-auto md:h-auto lg:h-auto flex flex-col shadow-md rounded-lg"
     >
       <img

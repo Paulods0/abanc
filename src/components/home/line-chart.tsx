@@ -42,7 +42,7 @@ const LineChart = () => {
     "Abril",
     "Maio",
     "Junho",
-    "Julho",
+    // "Julho",
   ]
 
   const data = {
@@ -62,7 +62,7 @@ const LineChart = () => {
     <CardScaleDownEffect>
       <Card className="bg-white rounded-3xl shadow-lg w-full p-4 ">
         <CardHeader className="mb-0 pb-5">
-          <CardTitle className="text-vermelho text-lg font-semibold uppercase flex flex-col w-full rounded-full">
+          <CardTitle className="text-vermelho text-lg font-bold uppercase flex flex-col w-full rounded-full">
             taxa de inflação
             <h6 className="capitalize font-semibold text-zinc-600 text-xs">
               últimos 12 meses

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 type Props = {
   image: string
   title: string
@@ -6,7 +8,14 @@ type Props = {
 
 const AnnouncementCard = ({ image, text, title }: Props) => {
   return (
-    <div className="w-full flex items-center h-24 border">
+    <motion.div
+      initial={{ backgroundColor: "transparent" }}
+      whileHover={{ backgroundColor: "#ddd" }}
+      transition={{
+        duration: 0.4,
+      }}
+      className="w-full flex items-center h-24 border"
+    >
       <img
         src={image}
         className="w-20 h-14 object-contain px-2 mr-3"
@@ -19,7 +28,7 @@ const AnnouncementCard = ({ image, text, title }: Props) => {
 
         <h6 className="text-vermelho text-sm font-medium">{text}</h6>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

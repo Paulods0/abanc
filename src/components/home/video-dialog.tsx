@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import {
   Dialog,
   DialogTitle,
@@ -17,10 +18,13 @@ const VideoDialog = ({ videoTitle, videoURL }: Props) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="relative cursor-pointer ">
+        <motion.div
+          whileTap={{ scale: 1.05 }}
+          className="relative cursor-pointer "
+        >
           <div className="absolute inset-0 rounded-2xl w-full h-full z-20 " />
           <VideoCard youtubeVideoURL={videoURL} />
-        </div>
+        </motion.div>
       </DialogTrigger>
 
       <DialogContent className="bg-white">
