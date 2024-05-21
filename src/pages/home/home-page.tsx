@@ -10,10 +10,11 @@ const HomePage = () => {
   return (
     <main className="min-h-screen mb-40 lg:mb-0 pb-16">
       <FadeIn>
-        <Container className="my-6">
+        <Container className="mt-8 mb-14">
           <Slider image="/banner/banner.png" />
         </Container>
-        <div className="my-6 space-y-6">
+
+        <div className="space-y-12 h-full">
           <HighlightSection />
 
           <div className="w-full px-2 lg:p-6 bg-zinc-300/15">

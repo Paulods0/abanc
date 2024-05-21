@@ -5,7 +5,7 @@ import MiniSlider from "./mini-slider"
 const HighlightSection = () => {
   return (
     <Container>
-      <section className="flex flex-col gap-8">
+      <section className="flex flex-col gap-4">
         <div className="flex lg:col-span-4 items-center ">
           <h1 className="text-vermelho font-bold text-xl capitalize">
             destaques
