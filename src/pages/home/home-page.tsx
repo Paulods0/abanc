@@ -21,7 +21,7 @@ const HomePage = () => {
             <EventSection />
           </div>
 
-          {/* <InflationSection /> */}
+          <InflationSection />
           <FinancialLiteracySection />
         </div>
       </FadeIn>
