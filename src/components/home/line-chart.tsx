@@ -64,9 +64,9 @@ const LineChart = () => {
         <CardHeader className="mb-0 pb-5">
           <CardTitle className="text-vermelho text-lg font-bold uppercase flex flex-col w-full rounded-full">
             taxa de inflação
-            <h6 className="capitalize font-semibold text-zinc-600 text-xs">
+            <span className="capitalize font-semibold text-zinc-600 text-xs">
               últimos 12 meses
-            </h6>
+            </span>
           </CardTitle>
         </CardHeader>
 
