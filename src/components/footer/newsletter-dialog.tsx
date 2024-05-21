@@ -62,7 +62,7 @@ const NewsletterDialog = () => {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Preencha o formulário</DialogTitle>
+          <DialogTitle>Subscrever Newsletter</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit(handleSubmitForm)} className="space-y-3">
           <div className="flex flex-col gap-2">
