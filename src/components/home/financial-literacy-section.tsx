@@ -5,7 +5,7 @@ const FinancialLiteracySection = () => {
   return (
     <Container>
       <section className="flex mb-20 flex-col">
-        <div className="w-full flex items-center mt-4 mb-8 gap-1">
+        <div className="w-full flex items-center mt-4 mb-5 gap-1">
           <h1 className="text-vermelho text-xl font-bold capitalize">
             literacia financeira
           </h1>

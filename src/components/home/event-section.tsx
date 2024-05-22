@@ -33,9 +33,17 @@ const EventSection = () => {
     <Container>
       <section className="space-y-7">
         <div className="w-full">
-          <h1 className="text-xl text-vermelho font-bold capitalize mb-4">
-            eventos
-          </h1>
+          <div className="w-full flex items-center justify-between">
+            <h1 className="text-xl text-vermelho font-bold capitalize mb-4">
+              eventos
+            </h1>
+            <Button
+              variant={"link"}
+              className="self-end underline text-vermelho text-xs"
+            >
+              Ver todos
+            </Button>
+          </div>
 
           <Swiper
             autoplay

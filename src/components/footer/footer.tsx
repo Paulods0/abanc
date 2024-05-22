@@ -21,6 +21,7 @@ const Footer = () => {
     <footer className="w-full h-32 flex flex-col mt-28 md:mt-0 justify-end relative">
       <section className="relative flex flex-col z-50 items-center">
         <HoverButton mEnter={handleOnMouseEnter} mLeave={handleOnMouseLeave} />
+
         <motion.div
           initial={{ height: 0 }}
           onMouseEnter={handleOnMouseEnter}
@@ -137,7 +138,7 @@ const HoverButton = ({
     <div
       onMouseEnter={mEnter}
       onMouseLeave={mLeave}
-      className="p-4 text-3xl text-vermelho hidden lg:flex capitalize w-fit"
+      className="p-4 text-3xl text-vermelho mb-2 hidden lg:flex capitalize w-fit"
     >
       <PiMouseSimpleLight />
     </div>
