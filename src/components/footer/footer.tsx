@@ -62,9 +62,7 @@ const Footer = () => {
       </section>
 
       <section className="w-full bg-neutral-300 flex flex-col z-20 self-end">
-
-        <div className="lg:flex items-center justify-center lg:space-x-40 grid grid-cols-2 lg:gap-0 gap-6 md:place-items-start py-4 px-6 lg:px-8 lg:py-8">
-
+        <div className="lg:flex items-center justify-center lg:space-x-40 grid grid-cols-2 lg:gap-0 gap-6 md:place-items-start py-4 px-6 lg:px-8 lg:py-5">
           <div className="flex  flex-col gap-y-2 lg:w-auto md:items-center lg:items-start w-full ">
             <FooterInfo text="info@abanc.co" icon="world" />
             <FooterInfo text="222 712 228" icon="phone" />
@@ -104,10 +102,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
         </div>
-
-
 
         <div className="flex text-xs py-3 bg-vermelho">
           <Container className="flex items-start md:justify-around md:space-x-10 gap-4 lg:gap-0 flex-col-reverse md:flex-row md:gap-0 text-xs text-white px-14">
@@ -125,7 +120,6 @@ const Footer = () => {
           </Container>
         </div>
       </section>
-
     </footer>
   )
 }

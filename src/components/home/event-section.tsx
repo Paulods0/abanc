@@ -31,7 +31,7 @@ const swiperBreakPoints = {
 const EventSection = () => {
   return (
     <Container>
-      <section className="space-y-14">
+      <section className="space-y-7">
         <div className="w-full">
           <h1 className="text-xl text-vermelho font-bold capitalize mb-4">
             eventos

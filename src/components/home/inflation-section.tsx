@@ -5,7 +5,7 @@ import LineChart from "./line-chart"
 const InflationSection = () => {
   return (
     <Container>
-      <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <section className="grid pt-2 grid-cols-1 lg:grid-cols-3 gap-8">
         <div>
           <EdFinanceCard title="luibor" />
         </div>
