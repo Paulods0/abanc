@@ -2,9 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 
 import "swiper/css"
+import "swiper/css/autoplay"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import "swiper/css/autoplay"
 
 type Props = {
   image: string
@@ -20,15 +20,14 @@ const Slider = ({ image }: Props) => {
         pagination={{ clickable: true }}
         autoplay
         navigation
-        className="rounded-[45px]"
       >
         {Array.from({ length: 3 }).map((_, i) => (
-          <SwiperSlide key={i} className="rounded-[45px] w-full">
-            <div className="relative w-full flex items-center rounded-[45px] justify-center">
+          <SwiperSlide key={i} className="w-full">
+            <div className="relative w-full flex items-center  justify-center">
               <img
                 loading="lazy"
                 src={image}
-                className="object-cover h-[280px] w-full md:h-full lg:h-full rounded-[45px]"
+                className="object-cover h-[280px] w-full md:h-full lg:h-full"
                 alt="slider-images"
               />
 

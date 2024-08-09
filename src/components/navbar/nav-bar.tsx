@@ -11,9 +11,7 @@ const Navbar = () => {
   const location = useLocation().pathname
   const currentPath = decodeURIComponent(location)
 
-  // const handleNavigate = (link: string) => {
-  //   return decodeURIComponent(link).replace(/ /g, "-")
-  // }
+
 
   return (
     <header className="flex sticky top-0 flex-col pb-4 pt-1 border-b z-20 bg-white">

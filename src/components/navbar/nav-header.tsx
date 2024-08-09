@@ -2,16 +2,9 @@ import { BsTelephone } from "react-icons/bs"
 
 const NavHeader = () => {
   return (
-    <div className="flex justify-end bg-black/10  items-center">
+    <div className="flex justify-end bg-white  items-center">
       <div className="flex  items-center h-full gap-x-4 pr-2 md:pr-0">
-        {Array.from({ length: 3 }).map((_, i) => (
-          <p key={i} className="text-[9px] md:text-xs">
-            Lorem
-            <span className="text-green-600 ml-1">0.5%</span>
-          </p>
-        ))}
-
-        <div className="hidden bg-gradient-to-br from-vermelho to-black/70 h-full md:flex items-center px-3 py-3 space-x-2">
+        <div className="hidden bg-gradient-to-br rounded-l-full from-red-500 via-red-500 to-black/80 h-full md:flex items-center px-3 py-3 space-x-2">
           <a
             href="tel:+244-941-685-402"
             className="text-white text-xs flex items-center capitalize gap-x-2"

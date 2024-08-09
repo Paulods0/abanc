@@ -48,14 +48,17 @@ const EventSection = () => {
           <Swiper
             autoplay
             navigation
-            spaceBetween={20}
-            slidesPerView={4}
+            spaceBetween={0}
+            slidesPerView={3}
             modules={[Autoplay, Navigation]}
             breakpoints={swiperBreakPoints}
             className="py-2"
           >
             {Array.from({ length: 10 }).map((_, index) => (
-              <SwiperSlide key={index} className="w-full">
+              <SwiperSlide
+                key={index}
+                className="w-full !items-center !justify-center !flex"
+              >
                 <EventCard image="/bfa-funcionário.jpeg" />
               </SwiperSlide>
             ))}
